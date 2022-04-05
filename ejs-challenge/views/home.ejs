@@ -1,0 +1,12 @@
+<%- include("./partial/header"); -%>
+<h1> Home </h1>
+<p><%= paraGraph %> </p>
+
+<% posts.forEach(function(post){ %>
+   <h1><%= post.titleValue %></h1>
+   <%=post.bodyValue + " ..."%>
+      <a href="/posts/<%=post._id%>">Read More</a></p>
+<% })  %>
+
+<%- include("./partial/footer"); -%>
+
